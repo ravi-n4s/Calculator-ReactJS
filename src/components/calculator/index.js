@@ -75,7 +75,7 @@ export default function Calculator() {
   return (
     <div className="layout-column align-items-center">
       <div data-testid="total-operations" className="pt-50 total-operations">
-        Total operations performed : {counter}
+        Total operations performed: {counter}
         <p style={{ opacity: reset ? "0" : "" }}></p>
       </div>
       <div className="card">
@@ -150,15 +150,17 @@ export default function Calculator() {
             >
               Reset
             </button>
-            <div className="layout-row justify-content-center align-items-center result-container">
-              <div
-                data-testid="result"
-                className="result-value ma-0 slide-up-fade-in"
-                style={{ display: reset ? "none" : "" }}
-              >
-                Result: {result}
+            {!reset && (
+              <div className="layout-row justify-content-center align-items-center result-container">
+                <div
+                  data-testid="result"
+                  className="result-value ma-0 slide-up-fade-in"
+                  style={{ display: reset ? "none" : "" }}
+                >
+                  Result: {result}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
       </div>
