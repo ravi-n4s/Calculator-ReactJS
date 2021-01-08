@@ -1,7 +1,7 @@
-import React  from 'react';
-import './App.css';
-import 'h8k-components';
-import Calculator from '././components/calculator/index.js';
+import React from "react";
+import "./App.css";
+import "h8k-components";
+import Calculator from "././components/calculator/index.js";
 
 const title = "Calculator";
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <h8k-navbar header={title} />
-      <Calculator/>
+      <Calculator />
     </div>
   );
 }
